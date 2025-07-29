@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untukmu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: 'Libre Baskerville', serif;
+      overflow: hidden;
+    }
+    .opening {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      transition: opacity 1s ease;
+    }
+    .opening h1 {
+      font-size: 1.8rem;
+      max-width: 600px;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #111;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .main-content {
+      display: none;
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      animation: fadeIn 2s ease forwards;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #ffb6b6;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .credit {
+      margin-top: 2rem;
+      font-style: italic;
+      color: #aaa;
+    }
+    audio {
+      display: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="opening" id="opening">
+    <div>
+      <h1>Teruntuk kamu yang telah menjadi rasa senang dalam hidupku</h1>
+      <button class="btn" onclick="enterSite()">Masuk</button>
+    </div>
+  </div>  <div class="main-content" id="main-content">
+    <h2>Bayangmu Dalam Senja</h2>
+    <p>Dalam lembayung senja yang merona, kutemukan matamu dalam cahaya.<br>
+    Tak bersuara, tapi bercerita tentang rindu yang diam-diam menjelma.</p><p>Langit mengguratkan warna kasih, bagai lukisan yang tak pernah letih.<br>
+Kau hadir dalam tiap hembusan angin, mengisi ruang hatiku yang hening.</p>
+
+<p>Setiap detik, namamu terucap lirih, seolah jantungku tahu siapa yang kupilih.<br>
+Kau bukan sekedar mimpi di malam hari, tapi suatu hal yang kurindukan tanpa henti.</p>
+
+<p>Jika cinta adalah waktu yang terus berjalan,<br>
+maka aku ingin bersamamu... Selamanya, tanpa alasan.</p>
+
+<div class="credit">Dari seseorang yang mencintaimu</div>
+
+  </div>  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>  <script>
+    function enterSite() {
+      document.getElementById('opening').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('opening').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+      }, 1000);
+    }
+  </script></body>
+</html>
