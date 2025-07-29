@@ -3,46 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Somebody's Pleasure</title>
+  <title>Izinkan Aku</title>
   <style>
-    body { margin: 0; font-family: sans-serif; background: #000; color: #fff; text-align: center; }
-    .section { padding: 50px 20px; max-width: 700px; margin: auto; }
-    .heading { font-size: 2em; margin-bottom: 20px; color: #ffe47a; }
-    .funny { font-style: italic; color: #ccc; animation: wobble 1s infinite; }
-    .poem { font-size: 1.1em; line-height: 1.6; white-space: pre-line; }
-    button { background: #ffe47a; color: #000; border: none; padding: 12px 24px; margin: 10px; border-radius: 8px; font-size: 1em; cursor: pointer; }
-    button:hover { background: #ffd25f; }
-    @keyframes wobble { 0%,100%{transform:rotate(-1deg);}50%{transform:rotate(1deg);} }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    .gallery-placeholder {
+      margin: 30px auto;
+      font-style: italic;
+      font-size: 18px;
+      background-color: #222;
+      padding: 20px;
+      border-radius: 12px;
+      width: fit-content;
+    }
+
+    .poem {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #222;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .poem-title {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .poem p {
+      margin: 10px 0;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <div class="section"><div class="heading">Teruntuk kamu yang telah menjadi rasa senang dalam hidupku</div></div>
-  <div class="section"><div class="heading">Galeri Kenangan</div><div class="funny">foto‑fotonya gaada... soalnya kita belum foto hehehe 😅📷</div></div>
-  <div class="section"><div class="heading">Bayangmu Dalam Senja</div><div class="poem">
-Dalam lembayung senja yang merona,
-kutemukan matamu dalam cahaya.
-Tak bersuara, tapi bercerita
-tentang rindu yang diam‑diam menjelma.
+  <div class="container">
+    <h1>Teruntuk kamu yang telah menjadi rasa senang dalam hidupku</h1>
 
-Langit mengguratkan warna kasih,
-bagai lukisan yang tak pernah letih.
-Kau hadir dalam tiap hembusan angin,
-mengisi ruang hatiku yang hening.
+    <div class="gallery-placeholder">
+      foto-fotonya gaada soalnya kita belum foto hehehe 😅
+    </div>
 
-Setiap detik, namamu terucap lirih,
-seolah jantungku tahu siapa yang kupilih.
-Kau bukan sekedar mimpi di malam hari,
-tapi suatu hal yang kurindukan tanpa henti.
+    <div class="poem">
+      <div class="poem-title">Bayangmu Dalam Senja</div>
+      <p>Dalam lembayung senja yang merona,<br />kutemukan matamu dalam cahaya.</p>
+      <p>Tak bersuara, tapi bercerita<br />tentang rindu yang diam-diam menjelma.</p>
+      <p>Langit mengguratkan warna kasih,<br />bagai lukisan yang tak pernah letih.</p>
+      <p>Kau hadir dalam tiap hembusan angin,<br />mengisi ruang hatiku yang hening.</p>
+      <p>Setiap detik, namamu terucap lirih,<br />seolah jantungku tahu siapa yang kupilih.</p>
+      <p>Kau bukan sekedar mimpi di malam hari,<br />tapi suatu hal yang kurindukan tanpa henti.</p>
+      <p>Jika cinta adalah waktu yang terus berjalan,<br />maka aku ingin bersamamu... Selamanya, tanpa alasan.</p>
+    </div>
 
-Jika cinta adalah waktu yang terus berjalan,
-maka aku ingin bersamamu... Selamanya, tanpa alasan.
-  </div></div>
-  <div class="section"><div class="heading">Bolehlah aku mencintaimu?</div>
-    <button>Boleh bangett 💌</button>
-    <button>Iya boleh 😳</button>
+    <div class="buttons">
+      <button>Boleh bangett</button>
+      <button>Iya boleh</button>
+    </div>
+
+    <div class="footer">
+      Dibuat dengan penuh perasaan oleh seseorang yang sedang jatuh hati 💌
+    </div>
   </div>
-  <div class="section"><div class="heading">dari aku, seseorang yang telah mencintaimu</div>
-    <img src="stickman.png" alt="stickman" style="max-height:150px; margin-top:20px;" />
-  </div>
+
+  <!-- Musik latar otomatis -->
+  <audio autoplay loop hidden>
+    <source src="musik.mp3" type="audio/mpeg" />
+  </audio>
 </body>
 </html>
