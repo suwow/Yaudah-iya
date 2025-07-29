@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untukmu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+    }
+
+    #opening, #main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+      transition: opacity 1s;
+    }
+
+    #main-content {
+      display: none;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      color: #e0b0ff;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto 1em;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #e0b0ff;
+      border: none;
+      color: #000;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #c88ff0;
+    }
+
+    .footer {
+      margin-top: 2em;
+      font-style: italic;
+      font-size: 0.95em;
+      color: #999;
+    }
+
+    audio {
+      display: none;
+    }
+
+    .poem {
+      border: 1px solid #444;
+      padding: 30px;
+      border-radius: 16px;
+      background-color: #1a1a1a;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <div id="opening">
+    <h1>Teruntuk kamu yang telah menjadi rasa senang dalam hidupku</h1>
+    <button id="masuk-button">Masuk</button>
+  </div>
+
+  <div id="main-content">
+    <div class="poem">
+      <h1>Bayangmu Dalam Senja</h1>
+      <p>Dalam lembayung senja yang merona, kutemukan matamu dalam cahaya.<br/>
+      Tak bersuara, tapi bercerita tentang rindu yang diam-diam menjelma.<br/><br/>
+      Langit mengguratkan warna kasih, bagai lukisan yang tak pernah letih.<br/>
+      Kau hadir dalam tiap hembusan angin, mengisi ruang hatiku yang hening.<br/><br/>
+      Setiap detik, namamu terucap lirih, seolah jantungku tahu siapa yang kupilih.<br/>
+      Kau bukan sekedar mimpi di malam hari, tapi suatu hal yang kurindukan tanpa henti.<br/><br/>
+      Jika cinta adalah waktu yang terus berjalan,<br/>
+      maka aku ingin bersamamu... Selamanya, tanpa alasan.</p>
+      <div class="footer">Dari seseorang yang mencintaimu</div>
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    window.onload = function () {
+      const button = document.getElementById("masuk-button");
+      if (button) {
+        button.onclick = function () {
+          document.getElementById("opening").style.display = "none";
+          document.getElementById("main-content").style.display = "flex";
+        };
+      }
+    };
+  </script>
+</body>
+</html>
