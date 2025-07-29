@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untukmu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .opening {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+    .main {
+      display: none;
+    }
+    button {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="opening" id="opening">
+    <h2>Teruntuk kamu yang telah menjadi rasa senang dalam hidupku</h2>
+    <button onclick="masuk()">Masuk</button>
+  </div>
+
+  <div class="main" id="main">
+    <h1>Bayangmu Dalam Senja</h1>
+    <p>
+      Dalam lembayung senja yang merona, kutemukan matamu dalam cahaya.<br>
+      Tak bersuara, tapi bercerita tentang rindu yang diam-diam menjelma.<br><br>
+      Langit mengguratkan warna kasih, bagai lukisan yang tak pernah letih.<br>
+      Kau hadir dalam tiap hembusan angin, mengisi ruang hatiku yang hening.<br><br>
+      Setiap detik, namamu terucap lirih, seolah jantungku tahu siapa yang kupilih.<br>
+      Kau bukan sekedar mimpi di malam hari, tapi suatu hal yang kurindukan tanpa henti.<br><br>
+      Jika cinta adalah waktu yang terus berjalan, maka aku ingin bersamamu...<br>
+      Selamanya, tanpa alasan.
+    </p>
+    <p style="margin-top: 40px; font-style: italic;">dari seseorang yang mencintaimu</p>
+    <audio autoplay loop>
+      <source src="musik.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    function masuk() {
+      document.getElementById('opening').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
